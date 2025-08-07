@@ -12,7 +12,7 @@ const Home = () => {
     <section className="w-full h-screen text-white lg:pt-20 px-4 flex justify-center items-center relative overflow-hidden">
       {/* Image centered behind text */}
       <img
-        className="absolute lg:top-90 md:top-90 top-100 left-1/2 lg:w-[30%] max-w-[800px] -translate-x-1/2 -translate-y-1/2 pointer-events-none  z-10"
+        className="absolute lg:top-90 md:top-90 top-120 left-1/2 lg:w-[30%] max-w-[800px] -translate-x-1/2 -translate-y-1/2 pointer-events-none  z-10"
         src={`${theme === "dark" ? darkImage : lightImage}`}
         alt="background"
       />
