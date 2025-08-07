@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+body {
+  background-color: #fff;
+}
+
+@font-face {
+  font-family: bubble;
+  src: url(./assets/MadieRoger-OGGao.ttf);
+}
+@font-face {
+  font-family: bubble2;
+  src: url(./assets/DefinitelyMaybe-1EzZ.ttf);
+}
+
+@font-face {
+  font-family: cloud1;
+  src: url(./assets/MckloudWhite-qq1.ttf);
+}
+@font-face {
+  font-family: cloud2;
+  src: url(./assets/MckloudStorm-DyD.ttf);
+}
+/* 
+@font-face {
+  font-family: dot2;
+  src: url(./assets/Nippo-Medium.otf);
+} */
+
+::selection{
+  background-color: #A476FF;
+  color: black;
+
+}
