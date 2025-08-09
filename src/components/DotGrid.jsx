@@ -270,7 +270,7 @@ const DotGrid = ({
 
   return (
     <section
-      className={` flex items-center justify-center h-full w-full relative ${
+      className={` flex items-center justify-center  w-full relative ${
         theme === "dark" ? "bg-[#0A0A0A]" : "bg-[#f9f9f9]"
       } ${className}`}
       style={style}

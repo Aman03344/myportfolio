@@ -9,22 +9,15 @@ const Home = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <section className="w-full h-screen text-white lg:pt-20 px-4 flex justify-center items-center relative overflow-hidden">
+    <section className="w-full max-w-6xl mx-auto h-screen text-white lg:pt-20  px-4 flex justify-center items-center relative overflow-hidden">
       {/* Image centered behind text */}
       <img
-        className="absolute lg:top-90 md:top-90 top-120 left-1/2 lg:w-[30%] max-w-[800px] -translate-x-1/2 -translate-y-1/2 pointer-events-none  z-10"
+        className="absolute top-10 left-1/2 lg:w-[35%] md:w-[90%] max-w-[800px] -translate-x-1/2 pointer-events-none z-10"
         src={`${theme === "dark" ? darkImage : lightImage}`}
         alt="background"
       />
 
-      {/* ✅ ADD THIS
-      <img
-        className="absolute top-[27%] left-[10%] w-[12%] z-20"
-        src={theme === "dark" ? whiteDuck : blackDuck}
-        alt="duck"
-      /> */}
-
-      <div className="w-[80%] h-full flex flex-col items-center justify-center relative">
+      <div className="w-[80%]  flex flex-col items-center justify-center relative">
         <h1
           className={`text-[120px] lg:text-[40vh] md:text-[30vh] font-[cloud1] uppercase ${
             theme === "dark" ? "text-white" : "text-black"

@@ -21,14 +21,28 @@ body {
   font-family: cloud2;
   src: url(./assets/MckloudStorm-DyD.ttf);
 }
-/* 
+
 @font-face {
-  font-family: dot2;
-  src: url(./assets/Nippo-Medium.otf);
-} */
+  font-family: Clash;
+  src: url(./assets/ClashDisplay.otf);
+}
 
 ::selection{
   background-color: #A476FF;
   color: black;
 
 }
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shine {
+  animation: shine 5s linear infinite;
+}
+
