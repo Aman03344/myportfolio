@@ -61,7 +61,7 @@ const About = () => {
 
         <CurvedLoop
           marqueeText="html5 ✦ css3 ✦ tailwindcss ✦ javascript ✦ typescript ✦ react ✦ redux ✦ tanstack ✦ reactrouter ✦ docker ✦ node ✦ mongoDB ✦ express ✦ postman ✦"
-          speed={1.5}
+          speed={2}
           curveAmount={0}
           direction="right"
           interactive={true}

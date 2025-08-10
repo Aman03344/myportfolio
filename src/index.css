@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+  /* border:  1px solid white; */
+}
+
 body {
   background-color: #fff;
 }
@@ -27,22 +31,37 @@ body {
   src: url(./assets/ClashDisplay.otf);
 }
 
-::selection{
-  background-color: #A476FF;
+@font-face {
+  font-family: Clash2;
+  src: url(./assets/ClashGrotesk-Light.otf);
+}
+
+::selection {
+  background-color: #a476ff;
   color: black;
-
 }
 
-@keyframes shine {
+@keyframes wave {
   0% {
-    background-position: 100%;
+    transform: rotate(0deg);
   }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60%,
   100% {
-    background-position: -100%;
+    transform: rotate(0deg);
   }
 }
-
-.shine {
-  animation: shine 5s linear infinite;
-}
-
