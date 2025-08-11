@@ -12,7 +12,7 @@ const App = () => {
     <main className=" w-full h-screen relative">
       <Navbar />
       <DotGrid
-        dotSize={0}
+        dotSize={3}
         gap={15}
         baseColor={`${theme === "dark" ? "#0A0A0A" : "#fff"}`}
         activeColor={`${theme === "dark" ? "#A476FF" : "#313131"}`}

@@ -9,9 +9,19 @@ import ShinyText from "../TextAnimations/ShinyText/ShinyText";
 import DecryptedText from "../TextAnimations/DecryptedText/DecryptedText";
 import shape from "../assets/shape.png";
 import { text } from "motion/react-client";
+import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 
 const Home = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
+
+  const links = [
+    { icon: Github, link: "https://github.com/Aman03344" },
+    {
+      icon: Linkedin,
+      link: "https://www.linkedin.com/in/aman-sheikh-5a2b9b328/",
+    },
+    { icon: Mail, link: "amansheikh03344@gmail.com" },
+  ];
 
   return (
     <section className="w-full max-w-7xl mx-auto h-a text-white ">
@@ -56,7 +66,7 @@ const Home = () => {
               </span>
 
               <p
-                className={`leading-7 text-lg font-medium pt-4 transition-colors duration-300 
+                className={`leading-7 text-lg  pt-4 transition-colors duration-300 
     ${theme === "dark" ? "text-gray-300" : "text-gray-800"}`}
               >
                 I specialize in creating exceptional digital experiences by
@@ -65,6 +75,23 @@ const Home = () => {
                 deliver high-performance solutions that seamlessly blend
                 functionality with an outstanding user experience.
               </p>
+              <div className="w-full flex items-center justify-start gap-2 pt-4">
+                {links.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`p-2.5 rounded-xl flex items-center ${
+                      theme === "dark"
+                        ? "bg-[#121212] hover:bg-[#121212]/10 border border-[#2B2B2B] text-[#989898]"
+                        : "bg-[#121212]/10 hover:bg-[#121212]/10 border border-[#727272] text-[#989898]"
+                    }  justify-center  `}
+                  >
+                    <link.icon size={30} />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -85,7 +112,7 @@ const Home = () => {
 
             {/* Image overlapping shape */}
             <img
-              src={darkImage}
+              src={`${theme === "dark" ? darkImage : lightImage}`}
               alt="Avatar"
               className="relative z-10 w-[280px] -mt-8 drop-shadow-xl"
             />
